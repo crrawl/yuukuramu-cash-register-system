@@ -2,14 +2,32 @@
 
 <h1>📅 TODO</h1>
 
-- [+] Proxy Feature <br>
-      + added in commit: <a href="https://">`ba5ab6f`</a><br>
-      + changelog: <a href="https://">`v2.3-beta`</a>
-- [x] Idea about `import` option where you can import config file with the custom name like `import: my_website.yml` <br>
-      + added in commit: <a href="https://gi">`823b14f`</a><br>
-      + changelog: <a href="https://github.a">`v2.3-beta`</a>
-- [x] Email notifications <br>
-      + added in commit: <a href="https://github.">`a98c463`</a><br>
-      + changelog: <a href="https://githu">`v2.4.3`</a>
+- [x] Create  base of cash register <br>
 
+- [x] purchase receipt <br>
+
+- [x] Add function scan item <br>
+
+- [ ] some <br>
+
+- [x] Summ all items and update purchase receipt <br>
+
+- [x] Add function purchashe(add), cancle(remove), pay <br>
 💭 sdsfdaadsfadsf
+
+DeathLine
+
+Izveidot kases aparātu iekš python
+Čeks ikeš txt file
+
+Iespējas skenēt, noņemt, pielikt, rezultātā summa.
+
+salikt DB. Katram produktam savs svītrkods.
+svītrkodu skenējot izmetas produkta informācija.
+
+Produkti uz svaru. Aprēķināt un čeks.
+
+raktīt ar OOP
+
+
+Čeks kā RL
