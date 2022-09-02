@@ -16,4 +16,4 @@
 
 - [ ] Scan barcode and get all product information. (check item info button)
 
-💭 Dedlines : end of september
+💭 Deadlines : end of september
