@@ -2,18 +2,17 @@
 
 <h1>📅 TODO</h1>
 
-- [x] Create  base of cash register <br>
+- [ ] Create  base of cash register <br>
 
-- [x] purchase receipt <br>
+- [ ] purchase receipt <br>
 
-- [x] Add function scan item <br>
+- [ ] Add function scan item <br>
 
-- [ ] some <br>
+- [ ] Summ all items and update purchase receipt <br>
 
-- [x] Summ all items and update purchase receipt <br>
+- [ ] Add function purchashe(add), cancle(remove), pay <br>
 
-- [x] Add function purchashe(add), cancle(remove), pay <br>
-💭 sdsfdaadsfadsf
+💭 
 
 DeathLine
 
