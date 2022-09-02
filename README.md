@@ -2,7 +2,7 @@
 
 <h1>📅 TODO</h1>
 
-- [i] Proxy Feature <br>
+- [+] Proxy Feature <br>
       + added in commit: <a href="https://">`ba5ab6f`</a><br>
       + changelog: <a href="https://">`v2.3-beta`</a>
 - [x] Idea about `import` option where you can import config file with the custom name like `import: my_website.yml` <br>
