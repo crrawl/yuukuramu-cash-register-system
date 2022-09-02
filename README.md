@@ -2,7 +2,7 @@
 
 <h1>📅 TODO</h1>
 - [ ] Create project environment <br>
-
+        + added in commit:
 - [ ] Create  base of cash register <br>
 
 - [ ] purchase receipt <br>
