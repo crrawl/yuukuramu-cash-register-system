@@ -12,21 +12,9 @@
 
 - [ ] Add function purchashe(add), cancle(remove), pay <br>
 
-💭 
+- [ ] barcode system. Add in  DB barcode then all product information under barcode.
 
-DeathLine
+- [ ] Scan barcode and get all product information. (check item info button)
 
-Izveidot kases aparātu iekš python
-Čeks ikeš txt file
+💭 Dedlines : end of september
 
-Iespējas skenēt, noņemt, pielikt, rezultātā summa.
-
-salikt DB. Katram produktam savs svītrkods.
-svītrkodu skenējot izmetas produkta informācija.
-
-Produkti uz svaru. Aprēķināt un čeks.
-
-raktīt ar OOP
-
-
-Čeks kā RL
