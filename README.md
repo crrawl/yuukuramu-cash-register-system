@@ -1,6 +1,7 @@
 # yuukuramu-cash-register-system
 
 <h1>📅 TODO</h1>
+
 - [ ] Create project environment <br>
      
 - [ ] Create  base of cash register <br>
