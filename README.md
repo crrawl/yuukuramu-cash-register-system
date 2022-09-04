@@ -2,8 +2,8 @@
 
 <h1>📅 TODO</h1>
 
-- [ ] Create project dev environment <br>
-     + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/45ba510ecbe2de33e7432285125897acfc7259f6">45ba51</a>
+- [x] Create project dev environment <br>
+     + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/45ba510ecbe2de33e7432285125897acfc7259f6">`45ba51`</a>
 
 - [ ] Create  base of cash register <br>
 
