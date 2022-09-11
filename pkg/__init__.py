@@ -5,7 +5,7 @@ class Cash_register:
 
         self.__author__ = "Raibisu Yuu Kuramu"
         self.__email__  = "yuukuramu@proton.me"
-        self.__version__ = "v1.0-alpha"
+        self.__version__ = "v1.4-alpha"
         self.__copyrights__ = """
 # -----------------------------------------------------
 # @Author 来ビス―クラム　(yuukuramu@proton.me)
@@ -13,16 +13,24 @@ class Cash_register:
 # @LinkedIn www.linkedin.com/in/yuukuramu
 # @instagram https://www.instagram.com/raibisu.kuramu
 # @site https://yuukuramu.xyz
-# -----------------------------------------------------"""
+# -----------------------------------------------------
+"""
 
         self.__name = name
         self.money = money
     
     def copyrights(self) -> str:
+        """copyrights
+
+        Returns:
+            str: copyrights
+        """
         return self.__copyrights__
         
 
     def id(self) -> str:
+        """
+        Returns:
+            str: serial number
+        """
         return self.__name
-
-
