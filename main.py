@@ -1,16 +1,15 @@
 
 from pkg.__init__ import Cash_register
-
-from config import DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASSWD
-from database import _Database_
+from pkg.products import Products
 
 def main() -> None: 
 
-    db = _Database_(DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASSWD)
     CR = Cash_register("DX6431LL", 30000)
-
+    EH_Books = Products(127,865,755565)
     print( CR.copyrights())
 
+    
+    EH_Books.add_seller('seller_name', 6)
 
 
 
