@@ -5,7 +5,7 @@ class Cash_register:
 
         self.__author__ = "Raibisu Yuu Kuramu"
         self.__email__  = "yuukuramu@proton.me"
-        self.__version__ = "v1.4-alpha"
+        self.__version__ = "v1.5-alpha"
         self.__copyrights__ = """
 # -----------------------------------------------------
 # @Author 来ビス―クラム　(yuukuramu@proton.me)
