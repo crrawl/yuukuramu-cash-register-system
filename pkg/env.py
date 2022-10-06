@@ -1,5 +1,4 @@
-from config import help 
-
+from config import help
 
 class Environment:
 
@@ -10,17 +9,20 @@ class Environment:
         self.bash = bash
         self.product = product
 
+
     def start(self) -> list:
         bash_name = f"[green]{self.USER}@{self.HOST}[/][white]:[/][light_blue]~[/][white]$[/] "
         self.cmd = self.bash.input(bash_name).split()
         
         try:
+            # if command is not in help dict -> config file
             if self.cmd[0] not in help:
                 self.bash.print(f"[help]{self.cmd[0]}: Command not found[/]")
         except IndexError:
             pass
 
         try:
+            # If command no arguments given, print command's help info
             if self.cmd[1]:
                 pass
         except IndexError:
@@ -31,20 +33,23 @@ class Environment:
 
         return self.cmd
 
-        
-        # return self.cmd
-    
 
+
+    #####################################
+    ##### To add new command        #####
+    ##### Code logic                #####
+    ##### Add in handler            #####
+    ##### Add in help()             #####
+    ##### Add in help -> config file ####
+    #####################################
+
+
+
+    #  commands handler
     def help(self) -> str:
 
         cmd = self.cmd[1]
         
-        # commands without arguments
-        if cmd == "id":
-            Environment.has_atributes == False
-            self.bash.print(help["id"])      
-        
-        # commands with arguments
         if self.cmd[0] == "help":
 
             try:
@@ -53,6 +58,8 @@ class Environment:
 
                 elif cmd == "addseller":
                     self.bash.print(help["addseller"])
+                elif cmd == "clear":
+                    self.bash.print(help["clear"])
 
             except IndexError:
                 self.bash.print("[help]help \[comand][/]")
@@ -60,30 +67,32 @@ class Environment:
 
     def addseller(self) -> None:
         if self.cmd[0] == "addseller":
-            self.product.addseller(self.cmd[1], self.cmd[2])   
+            self.product.add_seller(self.cmd[1], self.cmd[2])   
             print("seller is added")
         
-    def id (self) -> None:
-        self.cmd[1] == "Nones"
-        if self.cmd[0] == "id":
-            print("Your id")
-
-            # for item in config
-
     def konnichiwa (self) -> None:
 
         if self.cmd[0] == "konnichiwa":
             print(f"こんいしわ {self.cmd[1]}ーさん")
                 
+    def clear(self) -> None:
+        if self.cmd[0] == "clear":
 
+            import os
+            os.system("cls")
+
+
+
+
+    # declare commands
     def commands(self) -> None:
         
         try:
 
-            Environment.id(self)
             Environment.help(self)
-            Environment.addseller(self)
             Environment.konnichiwa(self)
+            Environment.clear(self)
 
+            Environment.addseller(self)
         except:
             pass

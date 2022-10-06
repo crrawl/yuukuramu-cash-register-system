@@ -11,30 +11,18 @@ DB_PASSWD: str  = ""
 USERNAME = "yuukuramu"
 HOSTNAME = "CASH-REGISTER"
 
-help_without_arguments = {
-    "id": """[help]id
-id returns current user information
-[/]""",
-}
+# help information
 help = {
     "help": """[help]help \[comand]
 help give you a information about the command
 [/]""",
-
     "addseller": """[help]addseller \[seller name] \[product category]
 Add new seller in database
 [/]""",
     "konnichiwa": """[help]konnichiwa \[name] 
 greetings
+[/]""",
+    "clear": """[help]clear \[chat] 
+clear current chat
 [/]"""
 }
-
-def Merge(dict1, dict2):
-    new_dic = {}
-    # return(dict2.update(dict1))
-
-    new_dic.update(dict1)
-    new_dic.update(dict2)
-    return new_dic
-    
-all_commands_list = Merge(help_without_arguments, help)
