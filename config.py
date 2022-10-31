@@ -24,5 +24,7 @@ greetings
 [/]""",
     "clear": """[help]clear \[chat] 
 clear current chat
-[/]"""
+[/]""",
+    "gci": """[help]gci \[chat] 
+printing all category info[/]"""
 }

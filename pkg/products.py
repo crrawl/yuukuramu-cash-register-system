@@ -1,6 +1,15 @@
+# REDESIGN SYSTEM -> Product.py
+# REDESIGN SYSTEM -> Product.py
+# REDESIGN SYSTEM -> Product.py
+# REDESIGN SYSTEM -> Product.py
+# REDESIGN SYSTEM -> Product.py
+# REDESIGN SYSTEM -> Product.py
+# REDESIGN SYSTEM -> Product.py
+# REDESIGN SYSTEM -> Product.py
+
 from database import connection
 
-class Products():
+class Product():
     def __init__(self, sellerid, categoryid, productid) -> None:
 
         self.sellerid = sellerid

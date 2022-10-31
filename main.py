@@ -7,7 +7,7 @@ from rich.theme import Theme
 
 
 from pkg.__init__ import Cash_register
-from pkg.products import Products
+from pkg.Storage import Storage
 from pkg.env import Environment
 
 from config import USERNAME, HOSTNAME
@@ -31,7 +31,7 @@ crtheme = Theme(
 # thee shortcut
 bash = Console(theme=crtheme)
 
-product = Products(127, 6, 127)
+product = Storage()
 CR = Cash_register("DX6431LL", 30000)
 
 env = Environment(USERNAME, HOSTNAME, bash, product)

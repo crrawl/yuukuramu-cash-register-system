@@ -45,8 +45,10 @@ class Environment:
 
 
 
-    #  commands handler
-    def help(self) -> str:
+    #  commands help handler
+    def help(self) -> None:
+        """ checking exist arguments cmd[1] 
+        """
 
         cmd = self.cmd[1]
         
@@ -60,16 +62,24 @@ class Environment:
                     self.bash.print(help["addseller"])
                 elif cmd == "clear":
                     self.bash.print(help["clear"])
-
+                elif cmd == "gci":
+                    self.bash.print(help["gci"])
             except IndexError:
                 self.bash.print("[help]help \[comand][/]")
 
-
+    
+    # command handler
+    # if command cmd[0] 
     def addseller(self) -> None:
         if self.cmd[0] == "addseller":
             self.product.add_seller(self.cmd[1], self.cmd[2])   
             print("seller is added")
-        
+    
+    def get_category_info(self) -> None:
+        if self.cmd[0] == "gci":
+            print("OK")
+            self.product.get_category_info()
+    
     def konnichiwa (self) -> None:
 
         if self.cmd[0] == "konnichiwa":
@@ -85,6 +95,7 @@ class Environment:
 
 
     # declare commands
+    # await for seller to write a command name in terminal
     def commands(self) -> None:
         
         try:
@@ -92,7 +103,8 @@ class Environment:
             Environment.help(self)
             Environment.konnichiwa(self)
             Environment.clear(self)
-
             Environment.addseller(self)
+            Environment.get_category_info(self)
+
         except:
             pass
