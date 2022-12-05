@@ -13,8 +13,9 @@
  
 - [ ] purchase receipt <br>
 
-- [ ] Add function scan item (with sound)<br>
-
+- [x] Add function scan item (with sound)<br>
+     + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/f8566cd744d9b89a2f7ce60c7235c41fd00c7084">`f8566cd`</a>
+     + 
 - [ ] Sum all items and update purchase receipt <br>
 
 - [ ] Add function purchashe(add), cancle(remove), pay <br>
