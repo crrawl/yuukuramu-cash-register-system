@@ -8,8 +8,9 @@
 - [x] Create bash interface, from where can control system. (Later update to GUI) <br>
      + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/4c2810eb40a37eeaf92ec8cc509c78c107285f62">`4c2810e`</a>
 
-- [ ] Create base of cash register <br>
-
+- [x] Create base of cash register <br>
+     + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/f8566cd744d9b89a2f7ce60c7235c41fd00c7084">`f8566cd`</a>
+ 
 - [ ] purchase receipt <br>
 
 - [ ] Add function scan item (with sound)<br>
