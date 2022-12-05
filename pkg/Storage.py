@@ -2,13 +2,6 @@ from database import connection
 
 class Storage:
 
-    def add_product(self, barcode: int, name: str, count: int, weight: float, category: int, price: float) -> None:
-        pass
-
-    def get_product(self, barcode: int) -> list:
-        pass
-
-
     def add_seller(self, seller_name: str, category: int) -> None:
         """add seller
 
@@ -33,8 +26,5 @@ class Storage:
             sql = "SELECT * FROM category"
             cursor.execute(sql)
             result = cursor.fetchall()
-            connection.commit()
-
-        for item in range(len(result)):
-            return result[item]['category_id'], \
-                    result[item]['category_name']
+        
+        return result
