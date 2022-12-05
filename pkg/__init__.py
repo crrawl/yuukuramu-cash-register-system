@@ -1,11 +1,10 @@
-class Cash_register:
+class Init:
         
-   # __init__ cash register
     def __init__(self, name: str, money: int) -> None:
 
         self.__author__ = "Raibisu Yuu Kuramu"
         self.__email__  = "yuukuramu@proton.me"
-        self.__version__ = "v3.4-alpha"
+        self.__version__ = "v3.5-alpha"
         self.__copyrights__ = """
 # -----------------------------------------------------
 # @Author 来ビス―クラム　(yuukuramu@proton.me)
@@ -15,9 +14,6 @@ class Cash_register:
 # @site https://yuukuramu.xyz
 # -----------------------------------------------------
 """
-
-        self.__name = name
-        self.money = money
     
     def copyrights(self) -> str:
         """copyrights
@@ -26,11 +22,3 @@ class Cash_register:
             str: copyrights
         """
         return self.__copyrights__
-        
-
-    def id(self) -> str:
-        """
-        Returns:
-            str: serial number
-        """
-        return self.__name
