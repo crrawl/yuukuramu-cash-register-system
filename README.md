@@ -11,19 +11,25 @@
 - [x] Create base of cash register <br>
      + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/f8566cd744d9b89a2f7ce60c7235c41fd00c7084">`f8566cd`</a>
  
-- [ ] purchase receipt <br>
-
+- [x] purchase receipt <br>
+     + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/ca84cd6e342b6d53e870124b9e0d611530c1e763">`ca84cd6`</a>
+     
 - [x] Add function scan item (with sound)<br>
      + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/f8566cd744d9b89a2f7ce60c7235c41fd00c7084">`f8566cd`</a>
-     + 
-- [ ] Sum all items and update purchase receipt <br>
+     
+- [x] Sum all items and update purchase receipt <br> 
+     + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/9dce005494198942c561efc3acb3f3021bc48362">`9dce005`</a>
 
-- [ ] Add function purchashe(add), cancle(remove), pay <br>
+- [x] Add function purchashe(add), cancle(remove), pay <br>
+     + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/ca84cd6e342b6d53e870124b9e0d611530c1e763">`ca84cd6`</a>
 
-- [ ] barcode system. Add in DB barcode then all product information under barcode. <br>
+- [x] barcode system. Add in DB barcode then all product information under barcode. <br>
+     + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/70ba5fc50a84575916ac2f588ca22fac1ebb4226">`70ba5fc`</a>
 
-- [ ] You got a list with products, and you cash out items. <br>
+- [x] Scan barcode and get all product information. (check item info button) <br>
+      + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/70ba5fc50a84575916ac2f588ca22fac1ebb4226">`70ba5fc`</a>
 
-- [ ] Scan barcode and get all product information. (check item info button) <br>
+- [ ] Create new CLI
+
 
 💭 Deadlines : end of end!
