@@ -2,6 +2,10 @@ from pkg.Storage import Storage
 from pkg.Product import Product
 from pkg.Printer import Printer
 
+printer = Printer()
+shop = Storage
+item = Product()
+
 class Cash_register(Storage):
         
    # __init__ cash register
@@ -11,21 +15,22 @@ class Cash_register(Storage):
         self.money = money
     
     def scan(self, barcode: int) -> None:
-        product = Product.get_product(1, barcode)
+        product = item.get_product(barcode)
 
-        Storage.basket.append(product)
+        shop.basket.append(product)
 
 
     def remove(self, barcode: int) -> None:
-        product = Product.get_product(1, barcode)
-        Storage.basket.remove(product)
+        product = item.get_product(barcode)
+        shop.basket.remove(product)
 
 
     def cancel(self) -> None:
-        Storage.basket.clear()
+        shop.basket.clear()
 
     def purchashe(self) -> None:
         
-        Printer.basket = Storage.basket
+        printer.basket = shop.basket
+        printer.receipt()
 
     
