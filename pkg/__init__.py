@@ -4,7 +4,7 @@ class Init:
 
         self.__author__ = "Raibisu Yuu Kuramu"
         self.__email__  = "yuukuramu@proton.me"
-        self.__version__ = "v3.5-alpha"
+        self.__version__ = "v4.0-alpha"
         self.__copyrights__ = """
 # -----------------------------------------------------
 # @Author 来ビス―クラム　(yuukuramu@proton.me)
