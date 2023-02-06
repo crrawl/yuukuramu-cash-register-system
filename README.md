@@ -29,6 +29,9 @@
 - [x] Scan barcode and get all product information. (check item info button) <br>
       + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/70ba5fc50a84575916ac2f588ca22fac1ebb4226">`70ba5fc`</a>
 
+- [x] Unique receipt filename 
+     + added in commit: <a href="https://github.com/yuukuramu/yuukuramu-cash-register-system/commit/dd9b0233c263acbe71b100fe56418d13b872f5f3">`dd9b023`</a>
+
 - [ ] Create new CLI
 
 
