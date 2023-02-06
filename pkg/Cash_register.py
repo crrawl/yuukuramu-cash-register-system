@@ -1,6 +1,11 @@
-from pkg.Storage import Storage
-from pkg.Product import Product
-from pkg.Printer import Printer
+import json
+
+from .Storage import Storage
+from .Product import Product
+from .Printer import Printer
+
+from config import path_to_save_basket
+
 
 printer = Printer()
 shop = Storage
@@ -15,9 +20,19 @@ class Cash_register(Storage):
         self.money = money
     
     def scan(self, barcode: int) -> None:
+        print("Scanning")
         product = item.get_product(barcode)
 
-        shop.basket.append(product)
+
+        product = str(product).replace("[", "")
+        product = str(product).replace("]", "")
+        
+        shop.append_product_to_basket(1, product)
+        
+        print("Scanned", product)
+
+        # shop.read_basket_element(1, product)
+
 
 
     def remove(self, barcode: int) -> None:
@@ -32,5 +47,8 @@ class Cash_register(Storage):
         
         printer.basket = shop.basket
         printer.receipt()
+    
+    def test(self) -> None:
+        print(shop.basket)
 
     
