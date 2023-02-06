@@ -4,10 +4,9 @@ from database import connection
 from config import path_to_save_basket
 
 class Storage:
-    
-    # basket = [[{'id': 25, 'barcode': '4510', 'name': 'Samsung Galaxy A20e', 'count': 1, 'weight': 0.7, 'category': 5, 'price': 300.99}]]
 
     def append_product_to_basket(self, product):
+
         json_obj = json.dumps(product, indent=4, separators=(", ", " : "))
 
         file = open(path_to_save_basket, "a")
@@ -15,7 +14,7 @@ class Storage:
 
         file.close()
     
-    def read_basket_element(self, product):
+    def show_basket(self):
         file = open(path_to_save_basket, "r")
 
         content = file.read()
@@ -25,6 +24,28 @@ class Storage:
             print(product)
 
         file.close()
+    def remove_product_from_basket(self, barcode: str) -> None:
+        """Delete a one 
+
+        Args:
+            barcode (str): Deleting only one product from basket.
+        """
+        barcode = str(barcode)
+
+        filer = open(path_to_save_basket, "r")
+        content = filer.read()
+        content = json.loads(content)
+
+        for idx, obj in enumerate(content):
+
+            if obj['barcode'] == barcode:
+                content.pop(idx)
+                break
+                
+
+
+        with open(path_to_save_basket, 'w', encoding='utf-8') as f:
+            f.write(json.dumps(content, indent=4))
 
 
 

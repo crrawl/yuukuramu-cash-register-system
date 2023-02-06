@@ -1,17 +1,16 @@
-import json
-
-from .Storage import Storage
-from .Product import Product
-from .Printer import Printer
+import time
+from pkg.Storage import Storage
+from pkg.Product import Product
+from pkg.Printer import Printer
 
 from config import path_to_save_basket
-
+from json_formatter import json_formatter
 
 printer = Printer()
 shop = Storage
 item = Product()
 
-class Cash_register(Storage):
+class CashRegister(Storage):
         
    # __init__ cash register
     def __init__(self, name: str, money: int) -> None:
@@ -20,24 +19,31 @@ class Cash_register(Storage):
         self.money = money
     
     def scan(self, barcode: int) -> None:
-        print("Scanning")
+        print("Scanning ... ")
+        time.sleep(1)
         product = item.get_product(barcode)
 
-
-        product = str(product).replace("[", "")
-        product = str(product).replace("]", "")
-        
         shop.append_product_to_basket(1, product)
         
-        print("Scanned", product)
+        for list in product:
+            print("Scanned -", list['name'])
 
-        # shop.read_basket_element(1, product)
-
+        json_formatter(path_to_save_basket)
 
 
     def remove(self, barcode: int) -> None:
+        print("Removing ...")
+        time.sleep(1)
+        
+        shop.remove_product_from_basket(1, barcode)
+
         product = item.get_product(barcode)
-        shop.basket.remove(product)
+        
+        for list in product:
+            print("Removed -", list['name'])
+
+
+
 
 
     def cancel(self) -> None:

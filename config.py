@@ -7,24 +7,10 @@ DB_USER: str    = "root"
 DB_PASSWD: str  = ""
 
 
-# bash name
-USERNAME = "yuukuramu"
-HOSTNAME = "CASH-REGISTER"
+# path where you save all receipts and filename of receipts
+filename = "receipts"
+path_to_save_receipts = f"C:\yuukuramu-cash-register-system\\{filename}"
 
-# help information
-help = {
-    "help": """[help]help \[comand]
-help give you a information about the command
-[/]""",
-    "addseller": """[help]addseller \[seller name] \[product category]
-Add new seller in database
-[/]""",
-    "konnichiwa": """[help]konnichiwa \[name] 
-greetings
-[/]""",
-    "clear": """[help]clear \[chat] 
-clear current chat
-[/]""",
-    "gci": """[help]gci \[chat] 
-printing all category info[/]"""
-}
+
+basket_name = "basket.json"
+path_to_save_basket = f"C:\yuukuramu-cash-register-system\\{basket_name}"
