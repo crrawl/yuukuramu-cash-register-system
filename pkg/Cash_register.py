@@ -1,4 +1,5 @@
 import time
+from os import unlink
 from pkg.Storage import Storage
 from pkg.Product import Product
 from pkg.Printer import Printer
@@ -52,5 +53,8 @@ class CashRegister(Storage):
 
     def purchashe(self) -> None:
         printer.receipt()
+
+        # Clearing a basket, after pay
+        unlink(path_to_save_basket)
 
     

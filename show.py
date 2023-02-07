@@ -4,7 +4,7 @@ storage = Storage()
 
 @click.command()
 def show():
-    basket = storage.show_basket
+    basket = storage.show_basket()
 
     if not basket:
         print("Basket is empty")
