@@ -32,6 +32,7 @@ class Product:
         Returns:
             list: example - (barcode:445)
         """
+
         with connection.cursor() as cursor:
             sql = f"SELECT barcode FROM products WHERE name = '{product_name}'"
             cursor.execute(sql)
@@ -39,7 +40,7 @@ class Product:
             
             return result
 
-    def add_product(self, barcode: int, name: str, count: int, weight: float, category: int, price: float) -> None:
+    def add_product(self, seller_id: int, name: str, count: int, weight: float, category: int, price: float) -> None:
         """Add product in database
 
         Args:
@@ -50,7 +51,7 @@ class Product:
             category (int): category of product
             price (float): product price
         """
-
+        barcode = Product.generate_barcode(1, seller_id, category)
         with connection.cursor() as cursor:
             sql = f"INSERT INTO `products` (`barcode`, `name`, `count`, `weight`, `category`, `price`) VALUES ('{barcode}', '{name}', '{count}', '{weight}', '{category}', '{price}')"
             cursor.execute(sql)
