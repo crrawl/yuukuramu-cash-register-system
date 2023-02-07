@@ -11,7 +11,7 @@ class Init:
 # @github https://github.com/yuukuramu
 # @LinkedIn www.linkedin.com/in/yuukuramu
 # @instagram https://www.instagram.com/raibisu.kuramu
-# @site https://yuukuramu.xyz
+# @site https://yuukuramu.me
 # -----------------------------------------------------
 """
     

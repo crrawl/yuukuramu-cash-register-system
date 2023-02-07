@@ -1,4 +1,5 @@
 import json
+import os
 
 from database import connection
 from config import path_to_save_basket
@@ -13,19 +14,29 @@ class Storage:
         file.write(json_obj)
 
         file.close()
-    
+
     def show_basket(self):
-        file = open(path_to_save_basket, "r")
 
-        content = file.read()
-        products = json.loads(content)
+        basket = []
 
-        for product in products:
-            print(product)
+        if not os.stat(path_to_save_basket).st_size==0:
+            file = open(path_to_save_basket, "r")
+            content = file.read()
+            products = json.loads(content)
 
-        file.close()
+            for product in products:
+                basket.append(product)
+
+            file.close()
+
+            return products
+        else:
+            return False
+
+
+
     def remove_product_from_basket(self, barcode: str) -> None:
-        """Delete a one 
+        """Delete a one item
 
         Args:
             barcode (str): Deleting only one product from basket.
@@ -41,14 +52,15 @@ class Storage:
             if obj['barcode'] == barcode:
                 content.pop(idx)
                 break
-                
-
 
         with open(path_to_save_basket, 'w', encoding='utf-8') as f:
             f.write(json.dumps(content, indent=4))
 
 
-
+    def cancel_basket(self):
+        with open(path_to_save_basket, 'w') as f:
+            f.write("[]")
+            f.close
 
     def add_seller(self, seller_name: str, category: int) -> None:
         """add seller

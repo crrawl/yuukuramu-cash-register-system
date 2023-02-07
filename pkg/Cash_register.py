@@ -42,19 +42,15 @@ class CashRegister(Storage):
         for list in product:
             print("Removed -", list['name'])
 
-
-
-
-
     def cancel(self) -> None:
-        shop.basket.clear()
+        print("Canceling ...")
+        time.sleep(1)
+
+        shop.cancel_basket(1)
+
+        print("Your purchase is cancelled!")
 
     def purchashe(self) -> None:
-        
-        printer.basket = shop.basket
         printer.receipt()
-    
-    def test(self) -> None:
-        print(shop.basket)
 
     

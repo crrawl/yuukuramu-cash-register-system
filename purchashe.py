@@ -1,10 +1,10 @@
+
 from pkg.Cash_register import CashRegister
 import click
 
 @click.command()
-@click.argument('barcode')
-def scan(barcode):
-    CashRegister.scan(1, barcode)
+def purcashe():
+    CashRegister.purchashe(1)
 
 if __name__ == "__main__":
-    scan()
+    purcashe()

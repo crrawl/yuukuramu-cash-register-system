@@ -13,4 +13,4 @@ path_to_save_receipts = f"C:\yuukuramu-cash-register-system\\{filename}"
 
 
 basket_name = "basket.json"
-path_to_save_basket = f"C:\yuukuramu-cash-register-system\\{basket_name}"
+path_to_save_basket = f"C:\yuukuramu-cash-register-system\\{basket_name}" 

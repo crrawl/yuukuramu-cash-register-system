@@ -2,17 +2,22 @@ from datetime  import datetime
 import calendar
 import time
 import os
-from config import path_to_save_receipts
+
+
+from config import path_to_save_receipts, path_to_save_basket
+from pkg.Storage import Storage
 
 class Printer:
-    
-    basket = []
 
-    for items in basket:
-        print(items)
+    if not os.stat(path_to_save_basket).st_size==0:
+        basket = Storage.show_basket(1)
+    else:
+        basket = []
 
+    print(Storage.show_basket, "shitty")
     def __init__(self) -> None:
         self.basket = Printer.basket
+
 
     def get_datetime(self, format: str = "%Y-%m-%d %H:%M:%S %Z%z") -> datetime:
         """get datetime from
@@ -64,11 +69,10 @@ PVN maksātāja kods - LV4000548636
             total = 0
 
             for items in self.basket:
-                for item in items:
-                    total += item["price"]   
 
-                    f.write(f"""
-{item["name"]}                                                                                  {item["price"]}$""")
+                f.write(f"""
+{items["name"]}                                                                                  {items["price"]}$
+""")
 
             f.write(f"""
 ==================================================================================================================
