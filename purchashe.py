@@ -1,10 +1,16 @@
 
 from pkg.Cash_register import CashRegister
+from os import system
 import click
 
 @click.command()
-def purcashe():
-    CashRegister.purchashe(1)
+@click.argument('barcode')
+def purchashe(barcode):
+    """Add seller
+
+    """
+    CashRegister.scan(1, barcode)
 
 if __name__ == "__main__":
-    purcashe()
+    system("cls")
+    purchashe()
