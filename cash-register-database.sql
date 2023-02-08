@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2022 at 10:04 AM
+-- Generation Time: Feb 08, 2023 at 01:11 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -54,10 +54,10 @@ INSERT INTO `category` (`parrent_id`, `category_id`, `category_name`) VALUES
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `barcode` int(10) NOT NULL,
+  `barcode` varchar(10) NOT NULL,
   `name` varchar(255) NOT NULL,
   `count` int(3) NOT NULL DEFAULT 0,
-  `weight` int(4) NOT NULL,
+  `weight` float NOT NULL,
   `category` int(10) NOT NULL,
   `price` float NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -67,11 +67,14 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `barcode`, `name`, `count`, `weight`, `category`, `price`) VALUES
-(1, 700000000, 'test', 2, 0, 0, 0.11),
-(2, 700000000, 'test', 2, 0, 0, 0.11),
-(3, 700000000, 'test', 2, 0, 0, 0.11),
-(4, 7003004, '101 Labi padomi', 20, 0, 6, 6),
-(5, 7003004, '101 Labi padomi', 20, 0, 6, 6);
+(20, '4510', 'Samsung Galaxy A20e', 1, 0.7, 5, 300.99),
+(22, '4521', 'Iphone 12 Pro Max 512GB', 12, 0.7, 5, 1200),
+(23, '4523', 'Iphone 12 Pro 512GB', 12, 0.7, 5, 1000),
+(24, '4524', 'Iphone 12 512GB', 12, 0.7, 5, 800),
+(25, '4525', 'Iphone 12 512GB', 12, 0.7, 5, 800),
+(26, '4526', 'Piens Farn Milk 3.2% 1L', 3, 0.7, 5, 0.99),
+(27, '4527', 'Apelsīni mazie C4/5 NAVELINA 2.šķ.', 3, 7, 5, 1.3),
+(29, '45429', 'Exploits', 1, 0, 4, 4000);
 
 -- --------------------------------------------------------
 
@@ -91,7 +94,8 @@ CREATE TABLE `sellers` (
 
 INSERT INTO `sellers` (`seller_id`, `seller_name`, `category`) VALUES
 (3, 'SIA \"Jarvis Rose\"', 6),
-(4, 'SIA \"Baltic Tehnologies\"', 3);
+(4, 'SIA \"Baltic Tehnologies\"', 3),
+(45, 'Evil Corp', 4);
 
 --
 -- Indexes for dumped tables
@@ -129,13 +133,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `sellers`
 --
 ALTER TABLE `sellers`
-  MODIFY `seller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `seller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
