@@ -7,7 +7,7 @@ from pkg.Product import Product
 def checkproduct(barcode):
     """Check product information
 
-    example, python3 checkproduct.py [barcode]"""
+    Usage: python3 checkproduct.py [barcode]"""
 
     product = Product.get_product(1, barcode)
     print("\nID", "|", "Barcode", "|", "Product", "|", "count", "|",  "weight", "|",  "category", "|",  "price")

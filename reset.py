@@ -7,7 +7,7 @@ from file_controll import delete_all_files
 @click.command()
 def reset():
     """reset all system
-    example, python3 reset.py
+    Usage: python3 reset.py
     """
     delete_all_files(path_to_save_receipts)
 

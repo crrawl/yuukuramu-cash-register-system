@@ -9,7 +9,7 @@ def showcategories():
     To add category use: addcategorie.py
 
 
-    example: python3 showcategories.py
+    Usage: python3 showcategories.py
     """
 
     data = Storage.get_category_info(1)

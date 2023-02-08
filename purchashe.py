@@ -6,10 +6,10 @@ import click
 @click.command()
 @click.argument('barcode')
 def purchashe(barcode):
-    """Add seller
-
+    """Purchashe products
+    Usage: py purchashe.py
     """
-    CashRegister.scan(1, barcode)
+    CashRegister.purchashe(1)
 
 if __name__ == "__main__":
     system("cls")

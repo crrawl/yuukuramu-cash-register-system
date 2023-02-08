@@ -5,7 +5,7 @@ import click
 @click.command()
 def cancel():
     """Cancel paymant. Clear basket
-    example, python3 cancel.py
+    Usage: python3 cancel.py
     """
     CashRegister.cancel(1)
 

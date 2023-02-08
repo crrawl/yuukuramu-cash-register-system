@@ -7,7 +7,7 @@ from os import system
 def addseller(seller_name, category_id):
     """Purchashe products and get receipt
 
-    example, python3 addseller.py [seller_name] [category_id]
+    Usage: python3 addseller.py [seller_name] [category_id]
     example, python3 addseller.py "Evil Corp" 4
 
     4 is category_id from 'PC'

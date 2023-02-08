@@ -12,7 +12,7 @@ from pkg.Product import Product
 def addproduct(seller_id, name, count, weight, category, price):
     """Add product in storage
 
-    example: python3 addproduct.py \n
+    Usage: python3 addproduct.py \n
                         seller_id (int): seller id \n
                         name (str): name of product\n
                         count (int): count of product\n

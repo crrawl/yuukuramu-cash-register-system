@@ -6,7 +6,7 @@ from config import path_to_save_basket
 
 class Storage:
 
-    def append_product_to_basket(self, product):
+    def append_product_to_basket(self, product:list) -> None:
 
         json_obj = json.dumps(product, indent=4, separators=(", ", " : "))
 
@@ -15,7 +15,7 @@ class Storage:
 
         file.close()
 
-    def show_basket(self):
+    def show_basket(self) -> None:
 
         basket = []
 
@@ -57,7 +57,7 @@ class Storage:
             f.write(json.dumps(content, indent=4))
 
 
-    def cancel_basket(self):
+    def cancel_basket(self) -> None:
         with open(path_to_save_basket, 'w') as f:
             f.write("[]")
             f.close

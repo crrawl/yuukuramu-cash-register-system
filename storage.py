@@ -6,7 +6,7 @@ import click
 def storage():
     """Show all magasine storage products
 
-    example: python3 storage.py
+    Usage: python3 storage.py
 
     """
 

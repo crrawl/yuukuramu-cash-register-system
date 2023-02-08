@@ -7,7 +7,7 @@ import click
 def scan(barcode):
     """Scan product to add in basket.
 
-    example: python3 scan.py [barcode]
+    Usage: python3 scan.py [barcode]
 
     to check barcodes, products - use, python3 storage.py --help
 

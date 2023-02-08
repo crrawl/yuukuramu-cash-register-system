@@ -1,10 +1,10 @@
 class Init:
         
-    def __init__(self, name: str, money: int) -> None:
+    def __init__(self) -> None:
 
         self.__author__ = "Raibisu Yuu Kuramu"
         self.__email__  = "yuukuramu@proton.me"
-        self.__version__ = "v4.0-alpha"
+        self.__version__ = "v7.0.1-release"
         self.__copyrights__ = """
 # -----------------------------------------------------
 # @Author 来ビス―クラム　(yuukuramu@proton.me)
@@ -22,3 +22,11 @@ class Init:
             str: copyrights
         """
         return self.__copyrights__
+
+    def version(self) -> str:
+        """copyrights
+
+        Returns:
+            str: copyrights
+        """
+        return self.__version__

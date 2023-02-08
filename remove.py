@@ -6,7 +6,7 @@ import click
 @click.argument('barcode')
 def remove(barcode):
     """Remove product from basket
-    example, python3 remove.py [barcode]
+    Usage: python3 remove.py [barcode]
     """
     CashRegister.remove(1, barcode)
 

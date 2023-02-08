@@ -6,7 +6,7 @@ storage = Storage()
 @click.command()
 def show():
     """Show all basket produkts
-
+    Usage show.py
     We can scan products with - python3 scan.py --help
     """
     basket = storage.show_basket()
